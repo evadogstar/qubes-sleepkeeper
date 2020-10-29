@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Qubes SleepKeeper Tool
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+[Service]
+#ExecStart=/home/user/qubes-sleepkeeper.py post
+ExecStart=/usb/bin/qubes-sleepkeeper post
+Environment=DISPLAY=:0.0
+Environment="XAUTHORITY=/var/run/lightdm/user/xauthority"
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
