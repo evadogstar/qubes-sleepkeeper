@@ -8,9 +8,10 @@ If screen will not be unlocked after some time and shutdown task will not be can
 
 ## Installation
 
-Copy files to dom0 and other
+Copy files to dom0. `.service` file is systemd service. Need to install and enable. This service run `qubes-sleepkeeper` program after wakeup to protect your Qubes and shutdown it if you will not cancel.
+
 ```
-sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeker.py' > /usr/bin/qubes-sleepkeeper
+sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeper.py' > /usr/bin/qubes-sleepkeeper
 sudo chmod +x /usr/bin/qubes-sleepkeeper
 sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeper.service' > /etc/systemd/system/qubes-sleepkeeper.service
 sudo systemctl enable qubes-sleepkeeper.service
