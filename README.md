@@ -24,7 +24,14 @@ sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeper.service' > /e
 sudo systemctl enable qubes-sleepkeeper.service
 ```
 
-you can also disable it at any time 
+Now, test it
+```
+sudo systemctl start qubes-sleepkeeper.service
+```
+
+If you see BOX with timer than all is working fine. Cancel this box and try to suspend your system and wakeup. If you don't see the box disable the service and investigate what happen.
+
+You can disable sleepkeeper at any time 
 ```
 sudo systemctl disable qubes-sleepkeeper.service
 ```
