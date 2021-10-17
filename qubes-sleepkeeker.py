@@ -22,8 +22,10 @@ def countdown(count):
         root.after(1000, countdown, count-1)
     else:
     	label['text'] = 'shutdown now'
-    	os.system("shutdown /s /t 1") 
+#    	os.system("shutdown /s /t 1") 
+    	os.system("sudo shutdown now") 
 
+	
 #parser = argparse.ArgumentParser('sleepkeeper')
 #parser.add_argument("post",action="store_true",help="just a flag argument")
 #parser.add_argument("post",help="requested argument provided by the system")
