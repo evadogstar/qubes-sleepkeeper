@@ -17,7 +17,7 @@ Copy files to dom0. `.service` file is systemd service. Need to install and enab
 In dom0:
 
 ```
-sudo qubes-dom0-update install python3-tkinter
+sudo qubes-dom0-update python3-tkinter
 sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeper.py' > /usr/bin/qubes-sleepkeeper
 sudo chmod +x /usr/bin/qubes-sleepkeeper
 sudo qvm-run --pass-io NAMEOFAPPVM 'cat /path/to/qubes-sleepkeeper.service' > /etc/systemd/system/qubes-sleepkeeper.service
