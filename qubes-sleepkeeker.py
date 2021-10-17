@@ -22,8 +22,8 @@ def countdown(count):
         root.after(1000, countdown, count-1)
     else:
     	label['text'] = 'shutdown now'
-#    	os.system("shutdown /s /t 1") 
-    	os.system("sudo shutdown now") 
+    	os.system("shutdown /s /t 1") 
+#    	os.system("sudo shutdown now") 
 
 	
 #parser = argparse.ArgumentParser('sleepkeeper')
